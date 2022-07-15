@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SongsController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 
@@ -19,3 +20,5 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/news', [HomeController::class, 'news'])->name('home.news');
 Route::get('/lyrics', [HomeController::class, 'lyrics'])->name('home.lyrics');
 Route::get('/shop', [HomeController::class, 'shop'])->name('home.shop');
+
+Route::resource('songs', SongsController::class);
