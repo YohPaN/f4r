@@ -10,7 +10,8 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
-        "twbs/bootstrap": "5.2.0-beta1"
+        "twbs/bootstrap": "5.2.0-beta1",
+        "voku/portable-ascii": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

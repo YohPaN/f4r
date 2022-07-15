@@ -2,6 +2,6 @@
 
 @section('content')
 <div>
-    <p>This is the welcome page</p>
+    <p>This is the actu page</p>
 </div>
 @endsection

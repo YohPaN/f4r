@@ -1,0 +1,7 @@
+body {
+    font-family: 'Nunito', sans-serif;
+}
+.dropdown:hover .dropdown-menu{
+  display: block;
+  margin: 0;
+}
