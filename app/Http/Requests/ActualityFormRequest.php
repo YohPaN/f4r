@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SongFormRequest extends FormRequest
+class ActualityFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,26 +25,24 @@ class SongFormRequest extends FormRequest
     {
         return [
             'title'=>'required',
-            'lyrics'=>'required',
-            'release_date'=> 'required',
-            'traduction' =>'required',
-            'displaySong'=>'integer',
+            'text'=>'required',
+            //'picture'=> 'required',
+            'displayActuality'=>'integer',
         ];
     }
 
     protected function prepareForValidation()
     {
-        if(!isset($this->displaySong)){
-            $this->displaySong = 0;
+        if(!isset($this->displayActuality)){
+            $this->displayActuality = 0;
         }else{
-            $this->displaySong = 1;
+            $this->displayActuality = 1;
         }
         $this->merge([
             'title'=> strip_tags($this->title),
-            'lyrics'=> strip_tags($this->lyrics),
-            'release_date'=> strip_tags($this->release_date),
-            'traduction'=> strip_tags($this->traduction),
-            'displaySong'=> strip_tags($this->displaySong),
+            'text'=> strip_tags($this->text),
+            //'picture'=> strip_tags($this->release_date),
+            'displayActuality'=> strip_tags($this->displayActuality),
         ]);
     }
 }

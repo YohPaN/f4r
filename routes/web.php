@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActualitiesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SongsController;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +23,5 @@ Route::get('/lyrics', [HomeController::class, 'lyrics'])->name('home.lyrics');
 Route::get('/shop', [HomeController::class, 'shop'])->name('home.shop');
 
 Route::resource('songs', SongsController::class);
+
+Route::resource('actualities', ActualitiesController::class);

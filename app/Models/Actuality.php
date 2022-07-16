@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Song extends Model
+class Actuality extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'lyrics', 'release_date', 'traduction', 'displaySong'];
+    protected $fillable = ['title', 'text', /*'picture',*/ 'displayActuality'];
 
 }

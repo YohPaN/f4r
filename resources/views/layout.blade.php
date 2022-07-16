@@ -30,7 +30,7 @@
                     <div class="justify-content-between collapse navbar-collapse " id="navbarSupportedContent">
                         <ul class="navbar-nav ">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="{{ route('home.news') }}">Actu</a>
+                                <a class="nav-link text-white" href="{{ route('actualities.index') }}">Actu</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="{{ route('songs.index') }}">Paroles</a>
@@ -44,7 +44,7 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="#">Galerie</a></li>
-                                    <li><a class="dropdown-item" href="#">Youtube</a></li>
+                                    <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCPIMc8ysV227nAHf3vxkAUQ">Youtube</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
