@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('lyrics');
-            //$table->integer('year_made');
+            $table->date('release_date');
             $table->string('traduction');
-            //$table->boolean('displaySong');
+            $table->integer('displaySong');
             $table->timestamps();
         });
     }

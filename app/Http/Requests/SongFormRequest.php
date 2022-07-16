@@ -26,20 +26,29 @@ class SongFormRequest extends FormRequest
         return [
             'title'=>'required',
             'lyrics'=>'required',
-            //'year_made'=> ['required', 'integer'],
+            'release_date'=> 'required',
             'traduction' =>'required',
-            //'displaySong'=>'required',
+            'displaySong'=>'integer',
         ];
     }
 
+    public function modifyDisplaySon(){
+
+        
+    }
     protected function prepareForValidation()
     {
+        if(!isset($this->displaySong)){
+            $this->displaySong = 0;
+        }else{
+            $this->displaySong = 1;
+        }
         $this->merge([
             'title'=> strip_tags($this->title),
             'lyrics'=> strip_tags($this->lyrics),
-            //'year_made'=> strip_tags($this->year_made),
+            'release_date'=> strip_tags($this->release_date),
             'traduction'=> strip_tags($this->traduction),
-            //'displaySong'=> strip_tags($this->displaySong),
+            'displaySong'=> strip_tags($this->displaySong),
         ]);
     }
 }
