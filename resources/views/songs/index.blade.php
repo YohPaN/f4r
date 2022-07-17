@@ -16,6 +16,7 @@
             @endif
         @endforeach
     @else
+    
         <h2>There is no song to display</h2>
     @endif
 

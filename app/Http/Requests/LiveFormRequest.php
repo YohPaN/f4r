@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ActualityFormRequest extends FormRequest
+class LiveFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,25 +24,25 @@ class ActualityFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'=>'required',
-            'text'=>'required',
-            'picture'=>['required', 'mimes:png,jpg'],
-            'displayActuality'=>'integer',
+            'live_date' => 'required',
+            'city' => 'required',
+            'place' => 'required',
+            'displayLive' => 'integer'
         ];
     }
 
     protected function prepareForValidation()
     {
-        if(!isset($this->displayActuality)){
-            $this->displayActuality = 0;
+        if(!isset($this->displayLive)){
+            $this->displayLive = 0;
         }else{
-            $this->displayActuality = 1;
+            $this->displayLive = 1;
         }
         $this->merge([
-            'title'=> strip_tags($this->title),
-            'text'=> strip_tags($this->text),
-            'picture'=> strip_tags($this->picture),
-            'displayActuality'=> strip_tags($this->displayActuality),
+            'live_date' => strip_tags($this->live_date),
+            'city' => strip_tags($this->city),
+            'place' => strip_tags($this->place),
+            'displayLive' => $this->displayLive,
         ]);
     }
 }

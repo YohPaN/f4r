@@ -52,7 +52,7 @@
                                     Live
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Concert prévus</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('lives.index') }}">Concert prévus</a></li>
                                     <li><a class="dropdown-item" href="#">Historique des concert</a></li>
                                 </ul>
                             </li>

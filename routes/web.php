@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ActualitiesController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LivesController;
 use App\Http\Controllers\SongsController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
@@ -25,3 +26,5 @@ Route::get('/shop', [HomeController::class, 'shop'])->name('home.shop');
 Route::resource('songs', SongsController::class);
 
 Route::resource('actualities', ActualitiesController::class);
+
+Route::resource('lives', LivesController::class);

@@ -17,13 +17,13 @@
             <div class="form-error"> {{ $message }} </div>
         @enderror
     </div>
-    <!--<div class='date' id='release_date'>
-        <label for="release_date">Date de sortie</label>
-        <input type='date' class="form-control" name="release_date">
-        @error('release_date')
+    <div class="mb-3">
+        <label for="picture" class="form-label">Ajouter une photo</label>
+        <input class="form-control" type="file" id="picture" name="picture">
+        @error('picture')
             <div class="form-error"> {{ $message }} </div>
         @enderror
-    </div>-->
+    </div>
     <div class="form-check">
         <input type="checkbox" class="form-check-input" id="displayActuality" name="displayActuality" value="true">
         <label class="form-check-label" for="displayActuality">Montrer la news?</label>

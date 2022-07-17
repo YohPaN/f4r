@@ -5,10 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Actuality extends Model
+class Live extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'text', 'picture', 'displayActuality'];
-
+    protected $fillable = ['live_date', 'city', 'place', 'displayLive'];
 }
